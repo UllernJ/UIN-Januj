@@ -1,0 +1,45 @@
+* {
+  margin 0;
+}
+body {
+  background-image: url("bilder/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: grid;
+  grid-template-columns:auto auto auto;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "nav     nav     nav "
+                       "main      main       main "
+                       "footer   footer  footer";
+font-family: arial;
+}
+#nav {
+  grid-area: nav;
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: black;
+}
+nav ul li{
+  list-style:none;
+  display: inline-block;
+  line-height: 10px;
+  margin: 10px;
+  color: white;
+}
+nav ul li a {
+text-decoration: none;
+font-size: 12px;
+}
+main {
+  margin-top: 5px;
+  grid-area: main;
+}
+.info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer {
+  grid-area: footer;
+}

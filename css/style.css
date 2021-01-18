@@ -43,3 +43,17 @@ main {
 footer {
   grid-area: footer;
 }
+.todocontainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+section section {
+width: 30%;
+border: 1px solid black;
+}
+section section button {
+  float: right;
+}

@@ -40,6 +40,17 @@ main {
   justify-content: center;
   align-items: center;
 }
+input, textarea {
+  border-radius: 6px;
+}
+.knapp {
+  float: right;
+  background-color: #56D4C2;
+  border-radius: 15px;
+  padding: 5px;
+  margin: 5px;
+  color: white;
+}
 footer {
   grid-area: footer;
 }
@@ -52,8 +63,23 @@ footer {
 }
 section section {
 width: 30%;
-border: 1px solid black;
+margin: 5px;
+}
+section section:hover {
+  border: 1px solid black;
 }
 section section button {
   float: right;
+  background-color: #56D4C2;
+  color: white;
+  border-radius: 15px;
+  padding: 5px;
+  margin: 5px;
+}
+@media only screen and (max-width: 800px) {
+  section section {
+  width: 100%;
+  }
+
+
 }

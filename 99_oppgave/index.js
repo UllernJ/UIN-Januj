@@ -1,5 +1,5 @@
 import expect from 'expect';
-
+//ulrik johannesen oppgave
 let solved = 0;
 let solvedBonus = 0;
 const toSolve = 17;

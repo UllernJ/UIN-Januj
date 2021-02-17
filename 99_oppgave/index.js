@@ -42,7 +42,7 @@ try {
 		const addOne = x => x + 1;
 		
 		//Rewrite the line below to use template literals.
-		const greeting = "Hello " + who + "! " + addOne(2) + " times.";
+		const greeting = `Hello ${who}! ${addOne(2)} times.`;
 
 		//Don't make changes below this line	
 		
@@ -56,14 +56,9 @@ try {
   
 	(function UseDefaultParameters() {
 		//Correct the syntax errors in the function.
-		function hello(who) {
-			if (who) {
+		function hello(who = "World") {
 			return 'Hello ' + who + '!';
 			}
-			else {
-				return "Hello World!"
-			}
-		}
 
 		// Don't make changes below this line	
 
@@ -81,8 +76,7 @@ try {
 		// Add just one rest parameter and use the number of elements in this parameter 
 		// (What is the name of that property?) in the return statement to let the test pass.
 		function foo(a, b, ...c) {
-		c = c.length;
-		return a + b + c;
+		return a + b + c.length;
         
 		}
 
@@ -168,7 +162,7 @@ try {
 		
 		// Use array destructuring to change the 3 statements below into 1 statement.
 		// Tip: Spread operator might be needed too.
-		const [a, value2, b, ...c] = arr;
+		const [a, , b, ...c] = arr;
         //siden når vi destructer en array og den beholder rekkefølge, valgte jeg å bare fylle ut 2 med en ubetydelig verdi.
 		// Don't make changes below this line	
 		
@@ -187,7 +181,7 @@ try {
 		
 		// Use array destructuring to change the 3 statements below into 1 statement.
 		// You should not need a temporary variable anymore.
-		({ a, b } = newFunction(a, b)); 
+		[a, b] = [b, a]
 
 		// Don't make changes below this line	
 		
@@ -537,9 +531,10 @@ try {
   console.error(e);
 }
 
+function newFunction_1(a, b) {
+	newFunction(a, b);
+}
+
 function newFunction(a, b) {
-	let tmp = a;
-	a = b;
-	b = tmp;
-	return { a, b };
+	({ a, b } = newFunction(a, b));
 }

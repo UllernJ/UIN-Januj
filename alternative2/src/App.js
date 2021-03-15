@@ -1,8 +1,9 @@
+import Movie from "./components/Movies.js";
 function App() {
   return (
-    <div className="App">
-      <h1>App is working</h1>
-    </div>
+      <>
+      <Movie/>
+      </>
   );
 }
 

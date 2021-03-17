@@ -7,7 +7,9 @@ const options = {
 
 const client = sanityClient({
     ...options,
-    useCdn: process.env.NODE_ENV === "production",    
+    useCdn: process.env.NODE_ENV === "production", 
 });
+
+
 
 export default client;

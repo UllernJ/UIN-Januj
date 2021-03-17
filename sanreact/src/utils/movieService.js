@@ -1,11 +1,12 @@
 import client from "./client";
 
 const movieListFields = `
-title, 
-actor,
+name, 
+"actor": actor->actor,
+"imageUrl": bilde.asset->url
 `;
 
 export const getMovies = async() => {
-    const data = await client.fetch(`*[_type == "movie"]${movieListFields}`);
+    const data = await client.fetch(`*[_type == "movie"]{${movieListFields}}`);
     return data;
 }

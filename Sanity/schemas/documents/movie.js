@@ -17,6 +17,11 @@ fields: [
     type: 'reference',
     to: [{type: 'actor'}],
     description: "dette er navnet på skuespilleren",    
+},
+{    
+title: "Bilde av filmen",
+name: "bilde",
+type: "image",
 }
         ]
                 }

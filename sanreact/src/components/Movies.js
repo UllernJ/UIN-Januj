@@ -10,7 +10,7 @@ const Movie = (title, actor) => {
     return(
         <>
         {data?.length > 0 ? <p>{JSON.stringify(data)}</p> : null}
-        <button onClick="handleClick">GET MOVIES!</button>
+        <button type="button" onClick={handleClick}>GET MOVIES!</button>
         </>
     )
 }

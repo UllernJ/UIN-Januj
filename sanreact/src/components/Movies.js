@@ -17,7 +17,8 @@ const Movie = (name, actor) => {
            }
        }
        fetchDataAsync();
-    }, []);
+    }, []); 
+
 
     return(
         <>
